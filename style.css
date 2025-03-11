@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    list-style: none;
+}
+section{
+    width: 100%;
+    min-height: 75vh;
+}
+.menu{
+    background-color:rgba(58, 54, 54, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:18px;
+    
+}
+.menu li{
+    list-style: none;
+    transition: .5s;
+    
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 20px;
+}
+.menu a:hover{
+    background-color: rgba(58, 54, 54, 0.5);
+}
+section:nth-child(1){ 
+    background-image: url(./images/bg-img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.75;
+}
+section:nth-child(4){
+    background-image: url(./images/bg-img2.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.75;
+}
+section:nth-child(6){
+    background-image: url(images/bg-img3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.75;
+}
+span{
+    margin: 10px 0px;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+}
+section:nth-child(1) .logo_title{
+    margin-top: 200px;
+    color: white;
+    border: 1px solid rgba(73, 64, 64, 0.651);;
+    background-color: black;
+    text-align: center;
+}
+section:nth-child(4) .portf-title{
+    text-align: center;
+
+}
+.about {
+    width: 948px;
+   margin: 0 auto;
+   padding: 64px 16px;
+}
+
+.portfolio{
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+.contact{
+    width: 948px;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+.about .aboutMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+.about .aboutMe .title_Foto,.text{
+    width: 50%;   
+    padding: 10px;
+    text-align: justify;
+}
+.aboutMe .title_Foto img{
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 290px;
+    border-radius: 100%;
+    border: 6px solid #7777;
+}
+.skill{
+    width: 100%;
+    margin: 15px auto;
+    text-transform: uppercase;
+}
+.skill li{
+    margin: 20px 0;
+    padding: 10px;
+}
+.bar{
+    background-color: #353b48;
+    display: block;
+    height: 23px;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.bar:hover{
+    box-shadow:0 12px 24px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) ;
+}
+/*Concertar o skill bars (animation)*/
+ .bar span{
+    margin-top: -1px;
+    height: 23px;
+    float: left;
+    border-radius: 10px;
+    background:  linear-gradient(90deg, rgba(108,109,115,1) 0%, rgba(170,175,172,1) 100%);
+}
+.photo{
+    width: 95%;
+    animation: photo 3s;
+}
+.wdesign{
+    width: 70%;
+    animation: wdesign 3s;
+}
+.gdesign{
+    width: 80%;
+    animation: gdesign 3s;
+}
+.other{
+    width: 45%;
+    animation: other 3s;
+}
+@keyframes photo{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes wdesing{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes gdesign{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes other{
+    0%{ 
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+
+.portfolio .galery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.galery{
+    width: 100%px;
+    margin: 0 100px;
+}
+.galery figure{
+    width: 300px;
+    height: 250px;
+    border: 6px solid #777;
+    box-shadow: 0  5px 15px rgba(0,0,0,.1);
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px;
+}
+.galery figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+
+}
+.galery figure img:hover{
+    transform: scale(1.1);
+}
+.portfolio .popup-image {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.9);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+.portfolio .popup-image span{
+    position: absolute;
+    top: 0; 
+    right: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+.portfolio .popup-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 750px;
+    object-fit: cover;
+}
+@media (max-width:963px){
+ 
+}
